@@ -1,0 +1,73 @@
+#--------------------------------------------------------------------------------
+
+PermissionError: '&dRoots &8» &cYou do not have sufficient permissions to perform this action. If you believe this is a error, please contact staff!' # REPLACES % | SENDS THIS MESSAGE WHEN PLAYER DOES NOT HAVE SUFFICIENT PERMISSIONS TO DO AN ACTION
+
+
+#--------------------------------------------------------------------------------
+
+CustomCommands: true # IF TRUE, CUSTOM COMMANDS WILL BE ENABLED
+
+Commands:
+  Feed: true # FEED THE PLAYER OR ANOTHER PLAYER | /feed [(Player)]
+  Kill: true # KILL THE PLAYER OR ANOTHER PLAYER | /kill [(Player)]
+  Fly: true # TOGGLE FLY FOR THE PLAYER OR ANOTHER PLAYER | /fly [(Player)]
+  Heal: true # HEAL THE PLAYER OR ANOTHER PLAYER | /heal [(Player)]
+  Sudo: true # MAKE ANOTHER PLAYER SAY SOMETHING IN CHAT OR A COMMAND | /sudo (Player) (Message)
+  ChatClear: true # CLEARS THE CHAT | /ClaerChat ----------- TO DO -----------
+  MuteChat: true # MUTES THE CHAT FOR ALL PLAYERS WITHOUT THE PERMISSION "roots.chat.mutechat.bypass" | /MuteChat ----------- TO DO -----------
+  Gamemode: # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER
+    Survival: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO SURVIVAL | /gms [(Player)]
+    Creative: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO CREATIVE | /gmc [(Player)]
+    Adventure: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO ADVENTURE | /gma [(Player)]
+    Spectator: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO SPECTATOR | /gmsp [(Player)]
+
+#--------------------------------------------------------------------------------
+
+CustomChat:
+  ChatCooldown:
+    Enabled: true
+    Time: 1 # IN SECONDS
+  ChatFormat:
+    ChatFormat: '&7[&a{player}&7] &f{message}' # SPIGOT COLOR CODES
+    ServerToPlayerFormat: '&d&lRoots' # SPIGOT COLOR CODES
+    HexCodes: true # HEX CODES WILL BE USABLE IN CHAT | NOT CURRENTLY IMPLEMENTED
+  ChatFilter:
+    Enabled: true
+    Censor: true # WILL COVER CHAT WITH RANDOM SYMBOLS
+    Delete: false
+    Kick: false
+    Mute: true
+    Staff:
+      ShowInChat:
+        Enabled: true #CHAT FILTER WILL SHOW TO STAFF (PLAYERS WITH PERMISSION "roots.chat.staffShow")
+        Color: '&c' #COLOR CODE THAT WORD WILL BE SHOWN IN
+
+#--------------------------------------------------------------------------------
+
+# BELOW FEATURES ARE ALL COMING IN THE FUTURE
+
+#--------------------------------------------------------------------------------
+
+# TODO:
+# 1. Add a command to check if a player is muted
+# 2. Add a command to check if a player is banned
+# 3. Add a command to check if a player is staff
+# 4. Add Movement Speed and Fly Speed
+
+Discord:
+  DiscordBridge:
+    Enabled: true
+    DiscordToMinecraft: true
+    MinecraftToDiscord: true
+    DiscordChannelID: '397526357191557121'
+    MinecraftAccountLinking: true
+    MinecraftAccountLinkingChannelID: '397526357757657089'
+    Token: 'YOUR_DISCORD_TOKEN'
+
+
+
+
+
+# CREDITS:
+#   CHATFILTER:
+#     Source: https://github.com/Sablednah/ChatFilter/
