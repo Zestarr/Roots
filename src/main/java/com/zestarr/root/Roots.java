@@ -30,6 +30,7 @@ public final class Roots extends JavaPlugin {
             if (getConfigBoolean("Commands.Fly")) { new FlyCommand(); }
             if (getConfigBoolean("Commands.Heal")) { new HealCommand(); }
             if (getConfigBoolean("Commands.Sudo")) { new SudoCommand(); }
+            if (getConfigBoolean("Commands.God")) { new GodCommand(); }
             if (getConfigBoolean("Commands.Gamemode.Survival")) { new SurvivalCommand(); }
             if (getConfigBoolean("Commands.Gamemode.Creative")) { new CreativeCommand(); }
             if (getConfigBoolean("Commands.Gamemode.Adventure")) { new AdventureCommand(); }

@@ -12,9 +12,10 @@ Commands:
   Kill: true # KILL THE PLAYER OR ANOTHER PLAYER | /kill [(Player)]
   Fly: true # TOGGLE FLY FOR THE PLAYER OR ANOTHER PLAYER | /fly [(Player)]
   Heal: true # HEAL THE PLAYER OR ANOTHER PLAYER | /heal [(Player)]
-  Sudo: true # MAKE ANOTHER PLAYER SAY SOMETHING IN CHAT OR A COMMAND | /sudo (Player) (Message)
-  ChatClear: true # CLEARS THE CHAT | /ClaerChat ----------- TO DO -----------
+  Sudo: true # MAKE ANOTHER PLAYER SAY SOMETHING IN CHAT OR A COMMAND | /sudo [(Player)] [(Message)]
+  ChatClear: true # CLEARS THE CHAT | /Clearchat ----------- TO DO -----------
   MuteChat: true # MUTES THE CHAT FOR ALL PLAYERS WITHOUT THE PERMISSION "roots.chat.mutechat.bypass" | /MuteChat ----------- TO DO -----------
+  God: true # TOGGLE GOD MODE FOR THE PLAYER | /god [(Player)]
   Gamemode: # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER
     Survival: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO SURVIVAL | /gms [(Player)]
     Creative: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO CREATIVE | /gmc [(Player)]

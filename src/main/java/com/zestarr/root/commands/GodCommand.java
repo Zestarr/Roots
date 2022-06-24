@@ -1,7 +1,6 @@
 package com.zestarr.root.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.attribute.Attribute;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -9,14 +8,15 @@ import java.util.List;
 
 import static com.zestarr.root.utils.ChatUtils.sendFromServer;
 
-public class HealCommand extends CommandManager {
+public class GodCommand extends CommandManager{
 
-    public HealCommand() {
+
+    public GodCommand() {
         super(
-                "heal",
-                new String[]{"healme"},
-                "Heal the (another) player",
-                "roots.heal"
+                "God",
+                new String[]{"god"},
+                "God (another) player",
+                "roots.god"
         );
     }
 
@@ -26,14 +26,15 @@ public class HealCommand extends CommandManager {
         if (sender instanceof Player) {
             if (args.length == 0) {
                 Player player = (Player) sender;
-                player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-                sendFromServer("&6You healed yourself", (Player) sender);
+                player.setInvulnerable(!player.isInvulnerable());
+                if (player.isInvulnerable()) { sendFromServer("&6God mode enabled", (Player) sender); }
+                if (!player.isInvulnerable()) { sendFromServer("&6God mode disabled", (Player) sender); }
             } else if (args.length == 1) {
                 Player player = Bukkit.getPlayer(args[0]);
                 if (player != null) {
-                    player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-                    sendFromServer("&6You have been healed", player);
-                    sendFromServer("&6You healed " + player, (Player) sender);
+                    player.setInvulnerable(!player.isInvulnerable());
+                    if (player.isInvulnerable()) { sendFromServer("&6God mode enabled for " + player, (Player) sender); }
+                    if (!player.isInvulnerable()) { sendFromServer("&6God mode disabled for " + player, (Player) sender); }
                 } else {
                     sendFromServer("&cPlayer not found", (Player) sender);
                 }

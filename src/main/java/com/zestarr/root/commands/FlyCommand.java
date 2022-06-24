@@ -27,10 +27,14 @@ public class FlyCommand extends CommandManager {
             if (args.length == 0) {
                 Player player = (Player) sender;
                 player.setAllowFlight(!player.getAllowFlight());
+                if (player.isInvulnerable()) { sendFromServer("&6Fly enabled", (Player) sender); }
+                if (!player.isInvulnerable()) { sendFromServer("&6Fly disabled", (Player) sender); }
             } else if (args.length == 1) {
                 Player player = Bukkit.getPlayer(args[0]);
                 if (player != null) {
                     player.setAllowFlight(!player.getAllowFlight());
+                    if (player.isInvulnerable()) { sendFromServer("&6Fly enabled for " + player, (Player) sender); }
+                    if (!player.isInvulnerable()) { sendFromServer("&6Fly disabled for " + player, (Player) sender); }
                 } else {
                     sendFromServer("&cPlayer not found", (Player) sender);
                 }
