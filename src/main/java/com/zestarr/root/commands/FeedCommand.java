@@ -1,7 +1,6 @@
 package com.zestarr.root.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -27,14 +26,13 @@ public class FeedCommand extends CommandManager {
         if (sender instanceof Player) {
             if (args.length == 0) {
                 Player player = (Player) sender;
-                sendFromServer("&6You have been fed", player);
+                sendFromServer("&7You have been fed", player);
                 player.setFoodLevel(20);
             } else if (args.length == 1) {
                 Player player = Bukkit.getPlayer(args[0]);
                 if (player != null) {
                     player.setFoodLevel(20);
-                    sendFromServer("&6You have been fed", player);
-                    sendFromServer("&6You fed " + player, (Player) sender);
+                    sendFromServer("&7You have fed " + player.getDisplayName(), (Player) sender);
                 } else {
                     sender.sendMessage(format("&cPlayer not found"));
                 }

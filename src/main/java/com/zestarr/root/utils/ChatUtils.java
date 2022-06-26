@@ -18,5 +18,6 @@ public class ChatUtils {
 
     public static void sendFromServer(String s, Player player) { player.sendMessage(format( Roots.getMainInstance().getConfig().getString("ServerString") + " &8» " + s)); }
 
+    public static void serverBroadcast(String s) { Bukkit.broadcastMessage(format(Roots.getMainInstance().getConfig().getString("ServerString") + " &8» " + s)); }
 
 }

@@ -1,6 +1,8 @@
 #--------------------------------------------------------------------------------
 
+
 PermissionError: '&dRoots &8» &cYou do not have sufficient permissions to perform this action. If you believe this is a error, please contact staff!' # REPLACES % | SENDS THIS MESSAGE WHEN PLAYER DOES NOT HAVE SUFFICIENT PERMISSIONS TO DO AN ACTION
+ServerString: '&d&lRoots'
 
 
 #--------------------------------------------------------------------------------
@@ -13,9 +15,10 @@ Commands:
   Fly: true # TOGGLE FLY FOR THE PLAYER OR ANOTHER PLAYER | /fly [(Player)]
   Heal: true # HEAL THE PLAYER OR ANOTHER PLAYER | /heal [(Player)]
   Sudo: true # MAKE ANOTHER PLAYER SAY SOMETHING IN CHAT OR A COMMAND | /sudo [(Player)] [(Message)]
-  ChatClear: true # CLEARS THE CHAT | /Clearchat ----------- TO DO -----------
+  ClearChat: true # CLEARS THE CHAT | /Clearchat ----------- TO DO -----------
   MuteChat: true # MUTES THE CHAT FOR ALL PLAYERS WITHOUT THE PERMISSION "roots.chat.mutechat.bypass" | /MuteChat ----------- TO DO -----------
   God: true # TOGGLE GOD MODE FOR THE PLAYER | /god [(Player)]
+  StaffChat: true
   Gamemode: # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER
     Survival: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO SURVIVAL | /gms [(Player)]
     Creative: true # SETS THE GAMEMODE OF THE PLAYER OR ANOTHER PLAYER TO CREATIVE | /gmc [(Player)]
@@ -25,6 +28,7 @@ Commands:
 #--------------------------------------------------------------------------------
 
 CustomChat:
+  Enabled: true
   ChatCooldown:
     Enabled: true
     Time: 1 # IN SECONDS
@@ -60,12 +64,11 @@ Discord:
     Enabled: true
     DiscordToMinecraft: true
     MinecraftToDiscord: true
-    DiscordChannelID: '397526357191557121'
+    DiscordServerID: '911400908221452319'
+    DiscordChannelID: '989981222354694224'
     MinecraftAccountLinking: true
     MinecraftAccountLinkingChannelID: '397526357757657089'
-    Token: 'YOUR_DISCORD_TOKEN'
-
-
+    Token: 'YOUR_DISCORD_BOT_TOKEN'
 
 
 

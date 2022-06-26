@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 
 import java.util.List;
 
-import static com.zestarr.root.utils.ChatUtils.format;
 import static com.zestarr.root.utils.ChatUtils.sendFromServer;
 
 public class SudoCommand extends CommandManager {

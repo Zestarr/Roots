@@ -27,13 +27,12 @@ public class HealCommand extends CommandManager {
             if (args.length == 0) {
                 Player player = (Player) sender;
                 player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-                sendFromServer("&6You healed yourself", (Player) sender);
+                sendFromServer("&7You have been healed", (Player) sender);
             } else if (args.length == 1) {
                 Player player = Bukkit.getPlayer(args[0]);
                 if (player != null) {
                     player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-                    sendFromServer("&6You have been healed", player);
-                    sendFromServer("&6You healed " + player, (Player) sender);
+                    sendFromServer("&7You healed " + player.getDisplayName(), (Player) sender);
                 } else {
                     sendFromServer("&cPlayer not found", (Player) sender);
                 }

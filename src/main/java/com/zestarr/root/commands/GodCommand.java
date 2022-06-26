@@ -27,14 +27,14 @@ public class GodCommand extends CommandManager{
             if (args.length == 0) {
                 Player player = (Player) sender;
                 player.setInvulnerable(!player.isInvulnerable());
-                if (player.isInvulnerable()) { sendFromServer("&6God mode enabled", (Player) sender); }
-                if (!player.isInvulnerable()) { sendFromServer("&6God mode disabled", (Player) sender); }
+                if (player.isInvulnerable()) { sendFromServer("&7God mode enabled", (Player) sender); }
+                if (!player.isInvulnerable()) { sendFromServer("&7God mode disabled", (Player) sender); }
             } else if (args.length == 1) {
                 Player player = Bukkit.getPlayer(args[0]);
                 if (player != null) {
                     player.setInvulnerable(!player.isInvulnerable());
-                    if (player.isInvulnerable()) { sendFromServer("&6God mode enabled for " + player, (Player) sender); }
-                    if (!player.isInvulnerable()) { sendFromServer("&6God mode disabled for " + player, (Player) sender); }
+                    if (player.isInvulnerable()) { sendFromServer("&7God mode enabled for " + player.getDisplayName(), (Player) sender); }
+                    if (!player.isInvulnerable()) { sendFromServer("&7God mode disabled for " + player.getDisplayName(), (Player) sender); }
                 } else {
                     sendFromServer("&cPlayer not found", (Player) sender);
                 }

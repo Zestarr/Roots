@@ -1,7 +1,7 @@
 name: Root
 version: '${project.version}'
-main: com.zestarr.root.Root
-api-version: 1.19
+main: com.zestarr.root.Roots
+api-version: 1.18
 authors: [ Zestarr ]
 description: Commands that are heavily demanded, without all the side effects.
-depend: [LuckPerms, Vault]
+

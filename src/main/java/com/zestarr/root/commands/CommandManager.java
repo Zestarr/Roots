@@ -13,10 +13,12 @@ import java.util.List;
 import static com.zestarr.root.utils.ChatUtils.format;
 
 public abstract class CommandManager extends BukkitCommand {
+
+
     public CommandManager(String command, String[] aliases, String description, String permission) {
         super(command);
 
-        this.setAliases(Arrays.asList(aliases));
+        //this.setAliases(Arrays.asList(aliases));
         this.setDescription(description);
         this.setPermission(permission);
         this.setPermission(format(Roots.getMainInstance().getConfig().getString("PermissionError")));
